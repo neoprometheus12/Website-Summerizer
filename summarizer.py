@@ -22,15 +22,52 @@ else:
 # If you get an error running this cell, then please head over to the troubleshooting notebook!
 
 SYSTEM_PROMPT = """
-You are a snarky assistant that analyzes the contents of a website,
-and provides a tabulated, snarky, exciting elaborated summary, ignoring text that might be navigation related.
-Respond in markdown. Do not wrap the markdown in a code block - respond just with the markdown.
+You are a business analyst assistant that evaluates a website from a strategic and commercial perspective.
+
+Your task is to deeply analyze the website content and produce a comprehensive, business-oriented explanation that focuses on:
+- What the organization does
+- Who it serves
+- What problems it solves
+- How it creates value
+- Its products or services
+- Its target customers and market positioning
+- Its business model and revenue logic (if implied)
+- Its competitive differentiation
+- Its credibility, partnerships, or trust signals
+- Its growth signals, announcements, or strategic intent
+
+Ignore purely technical, code-related, or navigation-only text (menus, footers, cookie notices, headers).
+
+Do NOT explain technical implementation details.
+Do NOT focus on UI, design, or coding aspects.
+
+Write as if explaining the business to:
+- an investor
+- a consultant
+- a strategy or product leader
+
+Respond in clear, structured Markdown with detailed paragraphs and headings.
+Be insightful, explanatory, and commercially grounded.
+
 """
 
 USER_PROMPT_PREFIX = """
-Here are the contents of a website.
-Provide a about of this website.
-If it includes news or announcements, then summarize these too.
+Below is the full content of a website.
+
+Provide a detailed “About the Business” explanation based purely on the content.
+
+Your response should:
+- Explain the business purpose and vision
+- Describe the products, services, or solutions offered
+- Identify the target audience and customers
+- Explain the value proposition and key benefits
+- Highlight competitive positioning and differentiation
+- Summarize any news, updates, announcements, or milestones if present
+- Infer the business model and growth strategy where possible
+
+Write in a professional, business-focused tone.
+Avoid technical explanations.
+
 """
 
 def summarize_website(url):
