@@ -35,6 +35,8 @@ If it includes news or announcements, then summarize these too.
 
 def summarize_website(url):
     website = fetch_website_contents(url)
+    if website.startswith("ERROR"):
+        return website
 
     model = genai.GenerativeModel(
         model_name="models/gemini-2.5-flash",
