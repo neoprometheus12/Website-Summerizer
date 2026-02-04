@@ -1,5 +1,8 @@
 streamlit
 python-dotenv
 google-generativeai
-beautifulsoup4
+openai
 requests
+beautifulsoup4
+ipython
+lxml
