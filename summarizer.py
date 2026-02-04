@@ -1,5 +1,11 @@
-import google.generativeai as genai
+import os
+from dotenv import load_dotenv
 from scraper import fetch_website_contents
+from IPython.display import Markdown, display
+from openai import OpenAI
+import google.generativeai as genai
+
+# If you get an error running this cell, then please head over to the troubleshooting notebook!
 
 SYSTEM_PROMPT = """
 You are a snarky assistant that analyzes the contents of a website,
