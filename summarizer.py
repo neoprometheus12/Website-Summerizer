@@ -5,6 +5,20 @@ from IPython.display import Markdown, display
 from openai import OpenAI
 import google.generativeai as genai
 
+
+load_dotenv(override=True)
+api_key = os.getenv("GEMINI_API_KEY")
+
+# Check the key
+if not api_key:
+    print("No API key was found - please check your .env file and ensure GEMINI_API_KEY is set")
+elif api_key.strip() != api_key:
+    print("An API key was found, but it looks like it might have space or tab characters at the start or end - please remove them")
+else:
+    print("API key found and looks good so far!")
+
+
+
 # If you get an error running this cell, then please head over to the troubleshooting notebook!
 
 SYSTEM_PROMPT = """
