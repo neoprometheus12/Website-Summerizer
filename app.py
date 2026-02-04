@@ -7,7 +7,7 @@ from summarizer import summarize_website
 # Page config (must be first Streamlit command)
 # -------------------------------------------------
 st.set_page_config(
-    page_title="Snarky Website Summarizer",
+    page_title="Website Snap",
     page_icon="🧠",
     layout="centered"
 )
@@ -26,7 +26,7 @@ genai.configure(api_key=api_key)
 # -------------------------------------------------
 # UI
 # -------------------------------------------------
-st.title("🧠 Snarky Website Summarizer")
+st.title("Website Snap")
 st.write("Paste any website URL and get a fun, snarky summary.")
 
 url = st.text_input("🌐 Enter website URL", placeholder="https://example.com")
